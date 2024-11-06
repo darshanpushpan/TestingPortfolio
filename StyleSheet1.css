@@ -202,7 +202,7 @@ main {
     }
 
     .projects-container {
-        padding: 1rem; /* Adjust padding within the project container */
+        padding: 0.5rem; /* Adjust padding within the project container */
     }
 
     .project {
