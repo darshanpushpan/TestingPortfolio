@@ -131,7 +131,7 @@ header {
 }
 
 .slide-wrapper img {
-    width: 30%;
+    width: 10%;
     object-fit: cover;
     border-radius: 8px;
 }
