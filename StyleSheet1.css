@@ -19,15 +19,13 @@ body {
     height: 100%;
     width: 100%;
     font-size: 1.375rem;
-    background-image: linear-gradient(to right, #f5f5dc, #ffe4c4); /* Gradient from beige to light cream */
+    background-image: linear-gradient(to right, #f5f5dc, #ffe4c4);
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures the background is fixed during scrolling */
-    background-size: cover; /* Ensures the background covers the entire viewport */
-    color: #333; /* Sets text color to dark grey for better readability against a light background */
-    font-family: 'Segoe UI', Arial, sans-serif; /* Font style for the website */
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
-
-
 
 /* Header styles */
 header {
@@ -51,216 +49,245 @@ header {
     margin-right: 1.25rem;
 }
 
-/* Navigation styles */
-nav {
+/* Desktop Navigation */
+#desktop-nav {
     margin-left: auto;
 }
 
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
+#desktop-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 
-        nav ul li {
-            display: inline;
-            margin-right:1.25rem;
-        }
+#desktop-nav ul li {
+    display: inline;
+    margin-right:1.25rem;
+}
 
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                padding: 0.625rem;
-                transition: color 0.3s ease, background-color 0.3s ease;
-            }
+#desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
-                nav ul li a:hover {
-                    color: #00bfff; /* Light blue on hover */
-                    background-color: rgba(255, 255, 255, 0.2); /* Slight background on hover */
-                }
+#desktop-nav ul li a:hover {
+    color: #00bfff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
+/* Mobile Menu Toggle (Hamburger Icon) */
+#mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    color: white;
+}
 
+/* Side Menu for Mobile */
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#side-menu ul li {
+    margin: 20px 0;
+}
+
+#side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Show side menu when toggled */
+#side-menu.show {
+    transform: translateX(0);
+}
+
+/* Slideshow Container */
 .slideshow-container {
-    width: 100%; /* Full viewport width */
-    height: 50rem; /* Fixed height */
+    width: 100%;
+    height: 50rem;
     position: relative;
     display: flex;
-    justify-content: center; /* Center images horizontally */
-    align-items: center; /* Center images vertically */
-    overflow: hidden; /* Hide anything outside this container */
-    margin-bottom: -9.375rem; /* Reduced bottom margin to decrease space to the next section */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: -9.375rem;
 }
 
 .slide-wrapper {
-    display: flex; /* Flexbox layout for images */
-    width: 100%; /* Full width of the container */
-    justify-content: space-evenly; /* Evenly space images */
-    align-items: center; /* Vertically align images in the center */
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-    .slide-wrapper img {
-        width: 17.188rem; /* Fixed width for each image */
-        height: auto; /* Auto height to maintain aspect ratio */
-        object-fit: cover; /* Cover fit to avoid distortion */
-        margin: 0 0.938rem; /* Space between images */
-    }
-
-
-
-
-
+.slide-wrapper img {
+    width: 17.188rem;
+    height: auto;
+    object-fit: cover;
+    margin: 0 0.938rem;
+}
 
 /* Main content styles */
 main {
-    padding-top: 11.25rem; /* Adjusting for the header height */
-    width: 90%; /* Control the width of the main content area to not span the full page */
-    margin: auto; /* Center the main content horizontally */
+    padding-top: 11.25rem;
+    width: 90%;
+    margin: auto;
 }
 
-/* Ensure that all full-page sections have enough padding at the top 
-   to account for the fixed header's height and a negative margin to align them properly. */
 .full-page {
     min-height: 75vh;
     width: 100%;
-    padding: 2.5rem; /* Consistent padding for better spacing */
-    padding-top: 8.75rem; /* Reduced padding-top as compared to previous */
-    margin-top: -6.25rem; /* Negative margin adjusted to pull the section upwards */
+    padding: 2.5rem;
+    padding-top: 8.75rem;
+    margin-top: -6.25rem;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center alignment for better aesthetics */
+    align-items: center;
     justify-content: center;
 }
 
-/* Specific adjustment for the About Me section if needed */
 #about {
-    padding-top: -3.125rem; /* Reduce this if the header is not very tall */
-    margin-top: -18.75rem; /* Adjust based on actual header height */
+    padding-top: -3.125rem;
+    margin-top: -18.75rem;
 }
 
+.full-page h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.875rem;
+    font-size: 1.75rem;
+}
 
-    .full-page h2 {
-        text-align: center; /* Center align all h2 headings */
-        width: 100%; /* Ensure the headings are full width */
-        margin-bottom: 1.875rem; /* Adds space below the heading */
-        font-size: 1.75rem; /* Larger font size for section titles */
-    }
-
-/* Specific adjustment for the Projects section */
 #projects {
-    margin-top: -8.75rem; /* Adjust this value if the header is larger */
-    padding-top: 13.75rem; /* Increased padding at the top to accommodate fixed header */
+    margin-top: -8.75rem;
+    padding-top: 13.75rem;
 }
 
 .projects-container {
-    text-align: center; /* Center-aligns the headers */
+    text-align: center;
     width: 100%;
     padding: 1.25rem;
-    background-color: none; /* No specific background color for the section */
-    color: #000; /* Sets text color */
+    color: #000;
 }
 
 .project {
     margin: 1.25rem auto;
     padding: 1.25rem;
-    border: 0.063rem solid #ccc; /* Subtle border */
-    width: 80%; /* Adjust width as necessary */
+    border: 0.063rem solid #ccc;
+    width: 80%;
     display: flex;
-    align-items: center; /* Vertically centers the items within each project */
-    justify-content: space-around; /* Distributes space around items */
+    align-items: center;
+    justify-content: space-around;
 }
 
 .project-icon {
-    flex: 0 0 90px; /* Reduced flex basis to 80px */
-    margin-right: 20px; /* Maintains space between the icon and the description */
+    flex: 0 0 90px;
+    margin-right: 20px;
 }
 
-    .project-icon img {
-        width: 5.625rem; /* Explicitly sets the width of the image to 80px */
-        height: 5.625rem; /* Explicitly sets the height of the image to 80px */
-        object-fit: contain; /* Ensures the image scales correctly within the dimensions */
-    }
+.project-icon img {
+    width: 5.625rem;
+    height: 5.625rem;
+    object-fit: contain;
+}
 
 .project-description {
-    flex: 1; /* Allows the description to fill the remaining space */
-    text-align: left; /* Aligns the text to the left */
+    flex: 1;
+    text-align: left;
 }
 
 .source-code {
     display: inline-block;
     padding: 0.625rem 1.25rem;
-    background-color:#666; /* No background color */
-    border: 1px solid #fff; /* White border */
+    background-color: #666;
+    border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
     transition: background-color 0.5s, color 0.5s;
 }
 
-    .source-code:hover {
-        background-color: #fff; /* White background on hover */
-        color: #000; /* Text color changes on hover */
-        transform: scale(1.05); /* Slightly enlarges the image on hover */
-    }
+.source-code:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
 
 #resume img {
-    border: 0.063rem solid #ccc; /* Adds a subtle border around the image */
-    transition: transform 0.3s ease-in-out; /* Smooth transform effect on hover */
-    cursor: pointer; /* Changes the cursor to indicate it's clickable */
-    width: 100%; /* Ensures the image is responsive and fits the container */
-    max-width: 18.75rem; /* Reduces the maximum width to 400px */
-    height: 18.75rem; /* Maintains the aspect ratio of the image */
+    border: 0.063rem solid #ccc;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 18.75rem;
+    height: 18.75rem;
 }
 
-    #resume img:hover {
-        transform: scale(1.05); /* Slightly enlarges the image on hover */
-    }
+#resume img:hover {
+    transform: scale(1.05);
+}
 
-
-
-/* Additional specific adjustments for the 'experience' section if needed */
 #experience {
-    padding-top: 18.75rem; /* Increase padding if the header is larger or for better visibility */
-    margin-top: -13.75rem; /* Corresponding negative margin */
+    padding-top: 18.75rem;
+    margin-top: -13.75rem;
 }
-
 
 /* Contact Section Styles */
 #contact {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically if there is enough space */
-    text-align: center; /* Ensures text and inline elements are centered */
-    width: 100%; /* Takes full width to allow for centering within the parent */
-    padding: 6.25rem; /* Optional: Adjust padding as needed for spacing */
-    min-height: 75vh; /* Ensures the section takes up sufficient vertical space */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 6.25rem;
+    min-height: 75vh;
 }
 
-    #contact h2 {
-        margin-bottom: 1.25rem; /* Space below the section heading */
-        font-size: 1.75rem; /* Larger font size for visibility */
-    }
+#contact h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+}
 
-    #contact p, #contact a {
-        font-size: 1.125rem; /* Ensures legibility */
-        margin-bottom: 0.625rem; /* Spacing between contact elements */
-        color: #666; /* Styling for text color */
-    }
+#contact p, #contact a {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+    color: #666;
+}
 
-    #contact a {
-        color: #0056b3; /* Style for links to make them stand out */
-        text-decoration: none; /* Optional: removes underline from links */
-        padding: 0.5rem 1rem; /* Padding for better touch interaction */
-        background-color: none; /* Background color for links for visibility */
-        border-radius: 0.313rem; /* Rounded corners for aesthetic appeal */
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    }
+#contact a {
+    color: #0056b3;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.313rem;
+    transition: background-color 0.3s ease;
+}
 
-        #contact a:hover {
-            background-color: #e2e2e2; /* Slightly darker on hover for interaction feedback */
-        }
-
-
+#contact a:hover {
+    background-color: #e2e2e2;
+}
 
 /* Footer styles */
 footer {
@@ -268,113 +295,75 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%; /* Ensure the footer spans the full width of the page */
+    width: 100%;
 }
 
-
-/* For screens smaller than 768px (standard mobile devices) */
+/* Responsive styles */
 @media (max-width: 767px) {
     body {
-        font-size: 0.75rem; /* Adjust font size for smaller screens */
+        font-size: 0.75rem;
     }
 
     header {
-        padding: 1rem; /* Adjust header padding */
-        padding: 8rem; /* Adjust header padding */
-        text-align: center; /* Center align text */
+        padding: 1rem;
+        text-align: center;
     }
 
     #profile-pic {
-        display: none; /* Hide profile picture on smaller screens */
+        display: none;
     }
 
-    /* Name and description */
-    .name {
-        font-size: 1.5rem; /* Larger font size for name */
-        margin-bottom: 0.5rem; /* Space below name */
+    #desktop-nav {
+        display: none;
     }
 
-    .description {
-        font-size: 1rem; /* Smaller font size for description */
-        color: #888; /* Lighter color for description */
-        margin-bottom: 1rem; /* Space below description */
-    }
-
-    nav {
-        margin: 0 auto; /* Center align navigation */
-    }
-
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        text-align: center; /* Center align links */
-    }
-
-    nav ul li {
-        display: inline-block; /* Display links horizontally */
-        margin-right: 1rem; /* Space between links */
-    }
-
-    nav ul li:last-child {
-        margin-right: 0; /* Remove margin from last link */
-    }
-
-    nav ul li a {
-        display: inline-block; /* Display links as block to have padding */
-        padding: 0.5rem; /* Padding around links */
+    #mobile-menu-toggle {
+        display: block;
     }
 
     .slideshow-container {
-        height: 12rem; /* Adjust slideshow height for smaller screens */
-        margin-top: 4rem; /* Adjust margin to create space below header */
+        height: 12rem;
+        margin-top: 4rem;
     }
 
     .slide-wrapper {
-        flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+        flex-wrap: wrap;
     }
 
     .slide-wrapper img {
-        width: calc(50% - 1rem); /* Two images per row with space */
-        margin: 0.5rem; /* Adjust margin between images */
+        width: calc(50% - 1rem);
+        margin: 0.5rem;
     }
 
     main {
-        padding-top: 6rem; /* Adjust padding top for main content */
+        padding-top: 6rem;
     }
 
     .full-page {
-        padding-top: 4rem; /* Adjust padding top for full-page sections */
-        margin-top: 0; /* Remove negative margin */
+        padding-top: 4rem;
+        margin-top: 0;
     }
 
     .project {
-        flex-direction: column; /* Stack project details vertically */
+        flex-direction: column;
     }
 
     #resume img {
-        max-width: 15rem; /* Adjust maximum width for resume image */
+        max-width: 15rem;
         height: auto;
     }
 
     #experience {
-        padding-top: 10rem; /* Adjust padding top for experience section */
-        margin-top: -8rem; /* Adjust negative margin */
+        padding-top: 10rem;
+        margin-top: -8rem;
     }
 
     #contact {
-        padding: 3rem; /* Adjust padding for contact section */
+        padding: 3rem;
     }
 
-    /* Footer styles for mobile */
     footer {
-        background-color: #222222;
-        color: white;
-        text-align: center;
-        padding: 0.75rem; /* Adjust footer padding */
-        width: 100%; /* Ensure the footer spans the full width of the viewport */
-        position: fixed; /* Fixed position at the bottom */
-        bottom: 0; /* Stick to the bottom */
-        z-index: 1000; /* Ensure footer is above other content */
+        padding: 0.75rem;
+        width: 100%;
     }
 }
