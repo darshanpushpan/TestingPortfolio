@@ -116,7 +116,7 @@ header {
 
 /* Slideshow Container */
 .slideshow-container {
-    width: 100%;
+    width: 50%;
     height: 300px;
     display: flex;
     justify-content: center;
