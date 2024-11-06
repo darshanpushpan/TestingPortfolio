@@ -136,6 +136,30 @@ header {
     border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+.slideshow-container {
+    width: 140%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: ;
+    margin-top: 20px;
+}
+
+.slide-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.slide-wrapper img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+}
+
 /* Main content styles */
 main {
     padding-top: 140px;
