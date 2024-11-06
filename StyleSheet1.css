@@ -131,10 +131,11 @@ header {
 }
 
 .slide-wrapper img {
-    width: 10%;
-    object-fit: cover;
-    border-radius: 8px;
-}
+    width: 20%; /* Adjust this percentage to control the image size */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: fill; /* Keeps image centered and cropped if necessary */
+    border-radius: 8px; /* Optional: Rounded corners for styling */
+    margin: 10px; /* Optional: Space between images */
 
 /* Main content styles */
 main {
