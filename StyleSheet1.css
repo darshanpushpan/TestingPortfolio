@@ -193,6 +193,36 @@ main {
     text-align: left;
 }
 
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Adjust the #projects section specifically for mobile */
+    #projects {
+        padding-top: 2rem; /* Reduce padding if needed */
+        margin-top: 0; /* Adjust margin to fit mobile screen */
+    }
+
+    .projects-container {
+        padding: 1rem; /* Adjust padding within the project container */
+    }
+
+    .project {
+        width: 100%; /* Full width for mobile */
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem; /* Adjust padding within each project */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .project-icon {
+        margin-right: 0; /* Remove margin on the right */
+        margin-bottom: 0.5rem; /* Add margin at the bottom */
+    }
+
+    .project-description {
+        text-align: center; /* Center text for better readability */
+    }
+}
+
+
 .source-code {
     display: inline-block;
     padding: 10px 20px;
